@@ -27,7 +27,7 @@ const authenticateJWT = (req, res, next) => {
 
 const initializeDB = async () => {
     try {
-        await mongoose.connect("mongodb://localhost:27017/peopleDB", {
+        await mongoose.connect("mongodb://54.144.242.8:27017/peopleDB", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
