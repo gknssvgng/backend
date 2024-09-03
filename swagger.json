@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "API documentation for People Service",
+      "version": "1.0.0",
+      "title": "People API"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/api/people": {
+        "get": {
+          "tags": ["People"],
+          "summary": "Get all people",
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": ["People"],
+          "summary": "Create or update a person",
+          "parameters": [
+            {
+              "name": "person",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Person"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Person": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+  
